@@ -1,0 +1,73 @@
+PACK DISCORD DOMAINE GRATUIT - LEGODINGO13
+==========================================
+
+Objectif :
+- créer gratuitement https://legodingo13.github.io/
+- le faire vérifier comme domaine sur Discord
+- rediriger automatiquement vers le site actuel :
+  https://legodingo13.github.io/site-internet-legodingo13/
+- conserver toutes les URL actuelles du site.
+
+CONTENU
+-------
+index.html
+  Redirige automatiquement la racine vers le site actuel.
+
+.nojekyll
+  Important : demande à GitHub Pages de servir les fichiers tels quels,
+  notamment le dossier .well-known utilisé pour la vérification Discord.
+
+.well-known/discord
+  Ce fichier doit contenir EXACTEMENT la preuve fournie par Discord.
+  Exemple de forme possible : dh=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  Ne garde pas le texte REMPLACE_CETTE_LIGNE... au moment de vérifier.
+
+ÉTAPES RAPIDES
+--------------
+1. Créer sur le compte GitHub Legodingo13 un dépôt PUBLIC nommé exactement :
+   Legodingo13.github.io
+
+2. Envoyer index.html et .nojekyll dans la racine du dépôt.
+   Envoyer aussi le dossier .well-known avec son fichier discord.
+
+3. Dans Settings > Pages :
+   Source : Deploy from a branch
+   Branch : main
+   Folder : /(root)
+   Save
+
+4. Attendre que https://legodingo13.github.io/ fonctionne.
+   Il doit rediriger vers le site actuel.
+
+5. Dans Discord : Paramètres utilisateur > Connexions > Afficher plus > Domaine.
+   Entrer uniquement : legodingo13.github.io
+
+6. Copier la preuve de vérification fournie par Discord.
+
+7. Sur GitHub, modifier le fichier :
+   .well-known/discord
+   et remplacer son contenu par la preuve Discord exacte, sans guillemets,
+   sans HTML et sans texte supplémentaire. Commit changes.
+
+8. Vérifier dans le navigateur que :
+   https://legodingo13.github.io/.well-known/discord
+   affiche exactement la preuve Discord.
+
+9. Retourner dans Discord et relancer la vérification.
+
+10. Une fois validé, activer l'option d'affichage de la connexion sur le profil.
+
+IMPORTANT
+---------
+Ne renomme pas et ne supprime pas le dépôt actuel :
+site-internet-legodingo13
+
+Les URL actuelles restent donc inchangées, par exemple :
+https://legodingo13.github.io/site-internet-legodingo13/
+https://legodingo13.github.io/site-internet-legodingo13/discord.html
+https://legodingo13.github.io/site-internet-legodingo13/youtube.html
+https://legodingo13.github.io/site-internet-legodingo13/profil.html
+https://legodingo13.github.io/site-internet-legodingo13/tutoriels.html
+
+Ce nouveau dépôt Legodingo13.github.io sert uniquement de domaine racine vérifiable
+et de redirection vers le site principal.
